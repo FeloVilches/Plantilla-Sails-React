@@ -14,9 +14,9 @@
 3. Los modelos y controladores de Sail.js tienen practicamente nada (la API del chat son rutas autogeneradas).
 4. Mantiene cuenta de visitas de la instancia del servidor en un `Service`.
 5. Enrutador
-	a. Paso de parametros por URL
-	b. Paso de `props`
-	c. Cambio de ventanas a traves de un menu
+    * Paso de parametros por URL
+    * Paso de `props`
+    * Cambio de ventanas a traves de un menu
 
 
 ## Instalacion y uso
