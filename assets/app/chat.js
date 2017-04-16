@@ -87,9 +87,9 @@ export default class Chat extends React.Component {
 				</p>
 				<div>
 					<form onSubmit={this.handleSubmit}>
-						<input placeholder="mensaje..." type = "text" 
+						<input className="form-control" placeholder="mensaje..." type = "text" 
 						value = {this.state.new_msg} onChange = {this.handleChange} />
-						<button type="submit">Enviar</button>
+						<button className="btn btn-primary" type="submit">Enviar</button>
 					</form>
 				</div>
 				<div  className="chat-msgs" ref="messageList">

@@ -19,31 +19,55 @@ class Layout extends React.Component {
     
     render() {
         return(
-        	<div>       	
+        	<div>
+        		<h2>Componente principal (app.js)</h2>
 				<div>
-					<ul>
-						<li><Link to="/spa">Pagina 1</Link></li>
-						<li><Link to="/spa/pagina2">Pagina 2</Link></li>
-						<li><Link to="/spa/pagina3/123456">Pagina 3</Link></li>
-					</ul>
+
+					<div className="btn-group btn-group-justified" role="group">
+
+						<div className="btn-group" role="group">
+							<Link to="/spa">
+								<button type="button" className="btn btn-default">Pagina 1</button>
+							</Link>
+						</div>
+						<div className="btn-group" role="group">
+							<Link to="/spa/pagina2">
+								<button type="button" className="btn btn-default">Pagina 2</button>
+							</Link>
+						</div>
+						<div className="btn-group" role="group">
+							<Link to="/spa/pagina3/123456">
+								<button type="button" className="btn btn-default">Pagina 3</button>
+							</Link>
+						</div>
+					</div>
+
 
 					<hr />
 
-					<Switch>
-						<Route exact path="/spa" component={Pagina1} />
-						<Route path="/spa/pagina2" render={() => (<Pagina2 a={4} b={6}/>)} />
-						<Route path="/spa/pagina3/:parameter" component={Pagina3} />
-					</Switch>
+					<div className="row">
+
+						<div className="col-md-6">
+
+							<Switch>
+								<Route exact path="/spa" component={Pagina1} />
+								<Route path="/spa/pagina2" render={() => (<Pagina2 a={4} b={6}/>)} />
+								<Route path="/spa/pagina3/:parameter" component={Pagina3} />
+							</Switch>
+						</div>
+
+						<div className="col-md-6">
+							<Componente1/>
+			            	<Componente2 var1="valor var 1 (dado por mi)"/>
+			            </div>
+	            	</div>
+
 				</div>
 
 				<hr />
 
-	        	<div>
-	            	<h2>Componente principal (app.js)</h2>
-	            	<Componente1/>
-	            	<Componente2 var1="valor var 1 (dado por mi)"/>
-	            	<Chat/>            	
-	            </div>
+				<Chat/>    	
+
             </div>            
         );
     }    
