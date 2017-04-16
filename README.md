@@ -25,6 +25,7 @@ Instalar con
 
 ```
 npm install
+bower install
 ```
 
 Parece que hay que tener Sails instalado globalmente (usar `npm install -g sails`)
